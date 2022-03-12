@@ -1,0 +1,53 @@
+.button__removeTask {
+    background-color: hsl(348, 83%, 47%);
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    transition: 0.5s;
+}
+
+.button__removeTask:hover {
+    background-color: hsl(348, 80%, 57%);
+}
+
+.button__removeTask:active {
+    background-color: hsl(348, 89%, 67%);
+};
+
+.section__button {
+    background: none;
+    border: none;
+    color: hsl(180, 100%, 25%);
+    font-size: 18px;
+    margin: 0 5px;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px){
+    .section__button{
+        flex-basis: 100%;
+        margin: 10px;
+    }
+}
+
+.section__button:hover {
+    color: hsl(180, 80%, 35%);
+}
+
+.section__button:active {
+    color: hsl(180, 60%, 45%);
+}
+
+
+.section__button:disabled {
+    color: hsl(0, 0%, 80%);
+}
+
+.section__buttons{
+    display: flex;
+    flex-wrap: wrap;
+}

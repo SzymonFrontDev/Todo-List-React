@@ -14,7 +14,7 @@
 
 .button__removeTask:active {
     background-color: hsl(348, 89%, 67%);
-};
+}
 
 .section__button {
     background: none;

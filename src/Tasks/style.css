@@ -37,3 +37,21 @@
 .list__button--done:active {
     background-color: hsl(120, 98%, 35%);
 }
+
+.button__removeTask {
+    background-color: hsl(348, 83%, 47%);
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    transition: 0.5s;
+}
+
+.button__removeTask:hover {
+    background-color: hsl(348, 80%, 57%);
+}
+
+.button__removeTask:active {
+    background-color: hsl(348, 89%, 67%);
+}

@@ -1,7 +1,7 @@
 
-import "./style.css"
+import "./style.css";
 
-const Buttons = (tasks, hideDoneTasks) => (
+const Buttons = ({ tasks, hideDoneTasks }) => (
     <div className="section__buttons">
         {tasks.length > 0 && (
             <>

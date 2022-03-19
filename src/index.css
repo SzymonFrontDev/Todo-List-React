@@ -1,15 +1,15 @@
-.html {
+html {
   box-sizing: border-box;
-  height: 100%;
+  height: 100%
 }
 
 *, ::after ::before {
-  box-sizing: inherit;
+  box-sizing: inherit
 }
 
-.body {
-  background-color: rgb(190, 190, 190);
+body {
+  background-color: rgb(219, 219, 219);
   margin: 15px;
   font-family: 'Montserrat', sans-serif;
-  word-break: break-word;
+  word-break: break-word
 }

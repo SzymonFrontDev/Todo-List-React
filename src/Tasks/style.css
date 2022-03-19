@@ -1,10 +1,10 @@
 .task__list {
     list-style: none;
-    padding:0;
+    padding:0
 }
 
 .task--done {
-    text-decoration: line-through;
+    text-decoration: line-through
 }
 
 .list__item {
@@ -13,11 +13,11 @@
     grid-column-gap: 10px;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid lightgray
 }
 
 .list__item--done{
-    display: none;
+    display: none
 }
 
 .list__button--done {
@@ -27,15 +27,15 @@
     background-color: hsl(120, 100%, 25%);
     color: white;
     border: none;
-    transition: 0.5s;
+    transition: 0.5s
 }
 
 .list__button--done:hover {
-    background-color: hsl(120, 99%, 30%);
+    background-color: hsl(120, 99%, 30%)
 }
 
 .list__button--done:active {
-    background-color: hsl(120, 98%, 35%);
+    background-color: hsl(120, 98%, 35%)
 }
 
 .button__removeTask {
@@ -45,13 +45,13 @@
     height: 30px;
     padding: 0;
     border: none;
-    transition: 0.5s;
+    transition: 0.5s
 }
 
 .button__removeTask:hover {
-    background-color: hsl(348, 80%, 57%);
+    background-color: hsl(348, 80%, 57%)
 }
 
 .button__removeTask:active {
-    background-color: hsl(348, 89%, 67%);
+    background-color: hsl(348, 89%, 67%)
 }

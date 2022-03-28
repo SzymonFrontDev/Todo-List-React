@@ -7,7 +7,7 @@ const Tasks = (props) => (
                 <li
                     key={task.id}
                     className={
-                        `list__item ${task.done && props.hideDoneTasks ?
+                        `list__item ${task.done && props.hideDone ?
                             "list__item--done" : ""}`} >
                     <button className="list__button--done" >
                         {task.done ? "✔" : ""}

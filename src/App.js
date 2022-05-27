@@ -7,10 +7,6 @@ import Header from "./Header";
 import Container from "./Container";
 import { useTasks } from "./useTasks.js";
 
-
-
-
-
 function App() {
   const [hideDone, setHideDone] = useState(false);
 
@@ -50,10 +46,8 @@ function App() {
           />
         }
       />
-
-
     </Container>
   )
-}
+};
 
 export default App;

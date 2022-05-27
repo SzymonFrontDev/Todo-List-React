@@ -2,8 +2,6 @@ import { useState } from "react";
 
 export const useTasks = () => {
 
-
-
     const removeTask = (id) => {
         setTasks(tasks => tasks.filter(task => task.id !== id));
     };
@@ -13,7 +11,6 @@ export const useTasks = () => {
             if (task.id === id) {
                 return { ...task, done: !task.done };
             }
-
             return task;
         }));
     }

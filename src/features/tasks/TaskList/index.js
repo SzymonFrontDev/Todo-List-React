@@ -1,33 +1,40 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectTasks, toggleTaskDone, removeTask } from '../tasksSlice';
 import { List, Item, Content, Button } from "./styled";
 
-const TaskList = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-    <List >
-        {
-            tasks.map(task => (
-                <Item
-                    key={task.id}
-                    hidden={task.done && hideDone}
-                   >
-                    <Button 
-                    ToggleDone
-                    onClick={() => toggleTaskDone(task.id)}
+const TaskList = () => {
+    const { tasks, hideDone } = useSelector(selectTasks);
+    const dispatch = useDispatch();
+
+    return (
+        <List >
+            {
+                tasks.map(task => (
+                    <Item
+                        key={task.id}
+                        hidden={task.done && hideDone}
                     >
-                        {task.done ? "✔" : ""}
-                    </Button>
-                    <Content done={task.done}>
-                    {task.content}
-                    </Content>
-                    <Button  
-                    remove
-                        onClick={() => removeTask(task.id)}
-                    >
-                        🗑</Button >
-                </Item>
-            ))
-        }
-    </List>
-);
+                        <Button
+                            ToggleDone
+                            onClick={() => dispatch(toggleTaskDone(task.id))}
+                        >
+                            {task.done ? "✔" : ""}
+                        </Button>
+                        <Content done={task.done}>
+                            {task.content}
+                        </Content>
+                        <Button
+                            remove
+                            onClick={() => dispatch(removeTask(task.id))}
+                        >
+                            🗑</Button >
+                    </Item>
+                ))
+            }
+        </List>
+    )
+};
 
 
 export default TaskList;

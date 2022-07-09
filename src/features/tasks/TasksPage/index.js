@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { useSelector } from "react-redux";
-import Form from "./Form";
+import Form from "../../tasks/TasksPage/Form";
 import TaskList from "./TaskList";
 import Buttons from "./Buttons";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import Container from "../../common/Container";
-import { selectTasks } from './tasksSlice';
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import Container from "../../../common/Container";
+import { selectTasks } from '../../tasks/tasksSlice';
 
 
-function Tasks() {
+function TasksPage() {
 
   const { tasks } = useSelector(selectTasks);
 
@@ -20,7 +20,6 @@ function Tasks() {
   return (
     <Container>
       <Header title="Lista zadań" />
-
       <Section
         title="Dodaj nowe zadanie"
         body={<Form />}
@@ -40,4 +39,4 @@ function Tasks() {
   )
 };
 
-export default Tasks;
+export default TasksPage;

@@ -1,8 +1,9 @@
 import React from "react";
-import { HashRouter, Link, Switch, Route, Redirect } from "react-router-dom";
+import { HashRouter, Switch, Route, Redirect,} from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage"
 import TaskPage from "./features/tasks/TaskPage"
 import AuthorPage from "./features/tasks/author/AuthorPage";
+import { StyledNavLink } from "./styled.js";
 
 
 export default () => (
@@ -10,10 +11,10 @@ export default () => (
     <nav>
       <ul>
         <li>
-          <Link to="/zadania">Zadania</Link>
+          <StyledNavLink to="/zadania">Zadania</StyledNavLink>
         </li>
         <li>
-          <Link to="/autor">O autorze</Link>
+          <StyledNavLink to="/autor">O autorze</StyledNavLink>
         </li>
       </ul>
       <Switch>

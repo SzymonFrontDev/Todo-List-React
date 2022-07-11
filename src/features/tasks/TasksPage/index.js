@@ -7,15 +7,11 @@ import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Container from "../../../common/Container";
 import { selectTasks } from '../../tasks/tasksSlice';
+import Search from './Search';
 
 
-function TasksPage() {
-
-  const { tasks } = useSelector(selectTasks);
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
+function TasksPage() {  
+  const tasks = useSelector(selectTasks);
 
   return (
     <Container>
@@ -23,6 +19,10 @@ function TasksPage() {
       <Section
         title="Dodaj nowe zadanie"
         body={<Form />}
+      />
+      <Section
+        title="Wyszukiwarka"
+        body={<Search />}
       />
       <Section
         title="Lista zadań"

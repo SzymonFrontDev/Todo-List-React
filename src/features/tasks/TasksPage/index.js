@@ -1,23 +1,22 @@
-import React, { useEffect } from 'react';
-import { useSelector } from "react-redux";
+import React from 'react';
 import Form from "../../tasks/TasksPage/Form";
 import TaskList from "./TaskList";
-import Buttons from "./Buttons";
+import Buttons from "./Buttons/FunctionalButtons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Container from "../../../common/Container";
-import { selectTasks } from '../../tasks/tasksSlice';
 import Search from './Search';
+import GetExampleTasksButton from './Buttons/GetExampleTasksButton/index';
 
 
-function TasksPage() {  
-  const tasks = useSelector(selectTasks);
+function TasksPage() {
 
   return (
     <Container>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
+        extraSectionContent={<GetExampleTasksButton />}
         body={<Form />}
       />
       <Section

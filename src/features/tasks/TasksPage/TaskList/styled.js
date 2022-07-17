@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const List = styled.ul`
     list-style: none;
@@ -56,3 +57,17 @@ export const Button = styled.button`
          }
     `}
 `;
+
+export const StyledLink = styled(NavLink)`
+text-decoration: none;
+color: #4d4d4d;
+
+&.active {
+    color: #fff;
+    font-weight: bolder;
+    text-decoration: none;
+}
+&.hover{
+    color: #737373;
+}
+`

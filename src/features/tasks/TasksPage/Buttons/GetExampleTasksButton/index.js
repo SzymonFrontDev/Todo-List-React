@@ -1,15 +1,25 @@
-import { useDispatch } from "react-redux";
-import { fetchExampleTasks } from "../../../tasksSlice";
-import { Button } from "../styled";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchExampleTasks, selectIsError, selectIsLoading } from "../../../tasksSlice";
+import { Button, Error,} from "../styled";
 
 const GetExampleTasksButton = () => {
     const dispatch = useDispatch();
+    const loading = useSelector(selectIsLoading);
+    const error = useSelector(selectIsError);
 
     return (
-
-        <Button onClick={() => dispatch(fetchExampleTasks())}>
-            Pobierz przykładowe zadania
-        </Button>
+        <>
+            {error ?
+                <Error>
+                    Wystąpił błąd, nie udało się pobrać przykłądowych zadań.
+                </Error>
+                :
+                <Button onClick={() => dispatch(fetchExampleTasks())}
+                disabled={loading} >
+                    {loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
+                </Button>
+            }
+        </>
     )
 };
 

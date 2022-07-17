@@ -6,7 +6,7 @@ export const Button = styled.button`
     color: hsl(180, 100%, 25%);
     font-size: 18px;
     margin: 0 5px;
-    transition: 0.5s;
+    transition: color 0.5s;
     align-items: center;
     justify-content: center;
 
@@ -33,3 +33,11 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
 `;
+
+export const Error = styled.span`
+color: crimson;
+`;
+
+export const loading = styled.p`
+color: #008080;
+`

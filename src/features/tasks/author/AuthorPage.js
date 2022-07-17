@@ -10,7 +10,11 @@ export default () => (
         <Section
             title="Szymon Leśko"
             body={
-                <>nanana</>
+                <>Cześć! Nazywam się <strong>Szymon</strong> i mam <strong>22</strong> lata. Moją ogromną pasją jest muzyka, od 4 lat
+                gram na <strong>gitarze elektrycznej</strong> a od niedawna na <strong>keyboardzie</strong>. Oprócz muzyki
+                bardzo miłuję się w sporcie. Aktywnie uprawia sport już od 5 lat.
+                Moim nowym zainteresowaniem od niedawna stało się programowanie, a moim celem jest
+                praca jako programista front-end.😁</>
             }
         />
     </Container>

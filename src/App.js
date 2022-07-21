@@ -5,8 +5,7 @@ import TaskPage from "./features/tasks/TaskPage"
 import AuthorPage from "./features/tasks/author/AuthorPage";
 import { StyledNavLink, NavLinkList } from "./styled.js";
 
-
-export default () => (
+const App = () => (
   <HashRouter>
     <nav>
       <NavLinkList>
@@ -34,3 +33,5 @@ export default () => (
     </nav>
   </HashRouter>
 );
+
+export default App;

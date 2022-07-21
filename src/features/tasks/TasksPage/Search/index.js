@@ -4,7 +4,7 @@ import { Item } from "../../Input";
 import searchQueryParamName from "../../TaskPage/searchQueryParamName";
 import { Wrapper } from "./style";
 
-export default () => {
+const Search = () => {
     const location = useLocation();
     const history = useHistory();
     const query = (new URLSearchParams(location.search)).get(searchQueryParamName);
@@ -31,3 +31,5 @@ export default () => {
    </Wrapper>
     );
 };
+
+export default Search;
